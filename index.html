@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAN HAUSER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="wrapper">
+        <div class="left-col">
+            <img src="./image/logo.jpeg" class="logo">
+            <div class="content">
+                <h1>Add plants to your living space</h1>
+                <p>Plants are an inexpensive means to accessorizing your 
+                    space and adding color and texture.
+                </p>
+                <button type="button">LEARN MORE</button>
+            </div>
+        </div>
+        <div class="right-col">
+           <div class="slider">
+            <img src="./image/pic-1.jpg" id="Slide">
+           </div>
+           <div class="slider-content">
+            <h2>Those plants con add your living spaces</h2>
+            <hr>
+            <p>House plants bring life and beauty to any indoor space, enhancing air quality and promoting a sense of calm.
+                 From hardy succulents to leafy ferns, they cater to different care levels and preferences. They thrive in various light conditions,
+                  making it easy to find the perfect plant for every room. Whether you're a seasoned gardener or a beginner, 
+                  house plants offer a touch of nature and tranquility to your home. Plus, tending to them can be a rewarding and therapeutic experience!</p>
+
+                <div class="controller">
+                    <img src="./image/back.png" id="BackBtn">
+                    <div class="vertical-line"></div>
+                    <img src="./image/next.png" id="NextBtn">
+                </div>
+           </div>
+        </div>
+      </div>
+
+    <script>
+        var Slide = document.getElementById("Slide");
+        var BackBtn = document.getElementById("BackBtn");
+        var NextBtn = document.getElementById("NextBtn");
+        
+        var slideimages = new Array(
+            "image/pic-1.jpg",
+            "image/pic-2.jpg",
+            "image/pic-3.jpg",
+            "image/pic-4.webp",
+            "image/pic-5.jpg"
+            
+        );
+
+        let i = 0;
+        NextBtn.onclick = function(){
+            if(i < 4){
+
+            Slide.src =  slideimages[i+1];
+            i++;
+        }
+    }
+    BackBtn.onclick = function(){
+            if(i > 0){
+
+            Slide.src =  slideimages[i-1];
+            i--;
+        }
+    }
+</script>
+</body>
+</html>
